@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Tarea } from 'src/app/models/Tarea';
+import { PrincipalService } from 'src/app/services/principal.service';
 
 @Component({
   selector: 'app-item',
@@ -9,9 +10,12 @@ import { Tarea } from 'src/app/models/Tarea';
 export class ItemComponent implements OnInit {
   @Input() tarea: Tarea;
   
-  constructor() { }
+  constructor(private prSvc: PrincipalService) { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
+    eliminar(): void {
+    //Elimina un item de la lista
+    this.prSvc.tareas = this.prSvc.tareas.filter(cadaTarea => cadaTarea !== this.tarea);
+  }  
 }
