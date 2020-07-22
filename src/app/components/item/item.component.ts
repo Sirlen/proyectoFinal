@@ -9,7 +9,7 @@ import { PrincipalService } from 'src/app/services/principal.service';
 })
 export class ItemComponent implements OnInit {
   @Input() tarea: Tarea;
-  
+    
   constructor(private prSvc: PrincipalService) { }
 
   ngOnInit(): void { }
