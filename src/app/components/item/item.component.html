@@ -1,6 +1,20 @@
-<span>{{tarea.usuario}} - </span>
-<span>{{tarea.descripcion}} - </span>
-<span>{{tarea.fecha | date:'dd/MM/yyyy HH:mm:ss'}}</span>
+<div class="row">
+	<div class="col-9">ID...: {{tarea.id}} </div>
+</div>
+<div class="row">
+	<div class="col-9">Responsable...: {{tarea.usuario}}</div>
+</div>
+<div class="row">
+	<div class="col-9">Descripción de Tarea...: {{tarea.descripcion}}</div>
+</div>
+<div class="row">
+	<div class="col-9">Estado...: {{tarea.estado}}</div>
+</div>
+<div class="row">
+	<div class="col-9">Fecha de Registro...: {{tarea.fecha | date:'dd/MM/yyyy HH:mm:ss'}}</div>
+</div>
+<div class="row">
+	<div class="col-9">Fecha a Finalizar...: {{tarea.fecha | date:'dd/MM/yyyy'}}</div>
+</div>
 &nbsp;
-<button (click) = "eliminar()">X</button>
-
+<button (click) = "eliminar()">Eliminar Tarea</button>

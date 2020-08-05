@@ -1,0 +1,95 @@
+input {
+  margin: 10px;
+}
+
+input:nth-child(1){
+  display: inline-block;
+  width: 200px;
+}
+
+input:nth-child(2){
+  display: inline-block;
+}
+
+.redondeado {
+  border-radius: 5px;
+}
+
+button:nth-child(1){
+  display: inline-block;
+}
+h1 {
+  color: #369;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 250%;
+}
+
+
+#container{
+  width: 1100px;
+  margin: 0px auto;
+  border: 3px solid rgb(60, 59, 61);
+} 
+
+
+Header{
+  text-align: center;
+  height: 200px;
+  width: 100%;
+  margin: 0px;
+}
+
+
+#content{
+  float: right;
+  width: calc(60% - 26px);
+  padding: 0px;
+  margin: 0px auto;
+} 
+
+aside{
+  float: left;
+  width: calc(40% - 26px);  
+  padding-left: 10px;
+} 
+
+ 
+.clearfix{
+  clear: both;
+} 
+
+footer{
+  background-color: black;
+  color: white;
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+}
+
+
+nav  {
+  padding: 1px 1px;
+  text-decoration: none;
+  margin-right: 1px;
+  margin-top: 1px;
+  display: inline-block;
+  background-color: #eee;
+  border-radius: 4px;
+  height: 70px;
+}
+nav :visited, a:link {
+  color: #607D8B;
+}
+nav :hover {
+  color: #039be5;
+  background-color: #CFD8DC;
+}
+nav .active {
+  color: #039be5;
+}
+
+nav ul li{
+float: left;
+list-style: none;
+margin: 10px;
+}

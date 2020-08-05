@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PrincipalService } from 'src/app/services/principal.service';
-import { Tarea } from 'src/app/models/Tarea';
+import { Tarea } from 'src/app/models/tarea';
 
 @Component({
   selector: 'app-formulario',
@@ -9,18 +9,20 @@ import { Tarea } from 'src/app/models/Tarea';
 })
 export class FormularioComponent implements OnInit {
   public descripcion: string;  //Mantiene la descripcion de la tarea
-  public usuario: string;  //Avance 4
-  public fecha: Date; //Avance 4
+  public usuario: string;  
+  public estado: string;
+  public fechaFinalizar: Date; 
   
-  constructor(private tareaSvc: PrincipalService) { }
+  constructor(private tareaSvc: PrincipalService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
 
-    //Este metodo se ejecuta cada vez que el usuario hace clicl en el boton
+    //Este metodo se ejecuta cada vez que el usuario hace click en el boton
     procesar(): void { 
 
       // Obtener la fecha de la maquina
-      var today = new Date();
+      //var today = new Date();
             
 
       if (this.descripcion && this.descripcion !== '') { 
@@ -29,10 +31,12 @@ export class FormularioComponent implements OnInit {
         const tarea = new Tarea();
         tarea.usuario = this.usuario;
         tarea.descripcion = this.descripcion;
-        console.log(today)
-        tarea.fecha = today;
-        this.tareaSvc.tareas.push(tarea);
+        //console.log(today)
+        tarea.fecha = new Date();
+        tarea.estado = this.estado;
+        tarea.fechaFinalizar = this.fechaFinalizar;
         console.log(tarea);
+        this.tareaSvc.addTarea(tarea).subscribe((resp) => console.log('RESPONSE', resp));
       } 
       
   }

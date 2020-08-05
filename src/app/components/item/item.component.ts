@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Tarea } from 'src/app/models/Tarea';
+import { Tarea } from 'src/app/models/tarea';
 import { PrincipalService } from 'src/app/services/principal.service';
 
 @Component({
@@ -17,5 +17,6 @@ export class ItemComponent implements OnInit {
     eliminar(): void {
     //Elimina un item de la lista
     this.prSvc.tareas = this.prSvc.tareas.filter(cadaTarea => cadaTarea !== this.tarea);
+    this.prSvc.deleteTarea(this.tarea).subscribe((resp) => console.log('RESPONSE', resp));
   }  
 }

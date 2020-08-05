@@ -1,1 +1,68 @@
 /* You can add global styles to this file, and also import other style files */
+h1 {
+    color: #369;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 200%;
+  }
+  h2, h3 {
+    color: rgb(42, 52, 197);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    font-size: 150%;
+  }
+  h4 {
+    color: #369;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50%;
+    text-align: center;
+  }
+  
+
+  a {
+    cursor: pointer;
+    cursor: hand;
+  }
+  button {
+    font-family: Arial;
+    background-color: rgb(215, 205, 230);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    cursor: hand;
+    color: #000;
+  }
+  button:hover {
+    background-color: #cfd8dc;
+  }
+  button:disabled {
+    background-color: #eee;
+    color: rgb(114, 111, 111);
+    cursor: auto;
+  }
+  
+  
+  /* everywhere else */
+  * {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background-image: url(assets/paper.jpg);    
+    background-size: cover;
+    position: relative;
+    margin: 2em;
+}
+
+
+header{
+  background-color: red($color: #571ce0);
+} 
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

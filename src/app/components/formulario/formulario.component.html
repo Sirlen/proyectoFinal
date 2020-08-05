@@ -1,4 +1,59 @@
-<input type = "text" name = "tarea" [(ngModel)] = "usuario"> 
-<input type = "text" name = "tarea" [(ngModel)] = "descripcion">
-&nbsp;
-<button (click) = "procesar()">Agregar tarea</button>
+<Body>
+
+    <div id="container">
+        <header>
+            <img src='./assets/Tareas.png' width="80px">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="indx.html">Inicio</a>      
+                    </li>
+                    <li>
+                        <a href="indx.html">Mantenimiento</a>      
+                    </li>
+                    <li>
+                        <a href="indx.html">Contáctenos</a>      
+                    </li>
+                </ul>
+            </nav>
+            <h1>Registrando Tareas</h1> 
+        </header>
+        
+        <aside>
+            <form>
+                <h4>Ingrese sus Tareas</h4>
+                <h2 class="col-sm-5">Responsable:</h2>
+                <input type = "text" name = "tarea" [(ngModel)] = "usuario"> 
+                <h2 class="col-sm-5">Descripción de Tarea:</h2>
+                <input type = "text" name = "tarea" [(ngModel)] = "descripcion">
+                <h2 class="col-sm-5">Estado:</h2>
+                <input type = "text" name = "tarea" [(ngModel)] = "estado">
+                
+                <h2 class="col-sm-5">Fecha a Finalizar:</h2>
+                <input type = "date" name = "tarea" [(ngModel)] = "fechaFinalizar">
+                &nbsp;
+                <button (click) = "procesar()">Agregar Tarea</button>
+            
+            </form>
+        </aside>
+
+        <section id= "content">
+            <h4>Tareas Registradas</h4>
+            <app-lista></app-lista>
+        </section>
+
+        
+        <div class= "clearfix"></div>
+
+        <footer>
+            <div class="patrocinado">
+              Patrocinado por Isthmus Software:
+              <img src='./assets/iconIsthmus.png' width="40px">
+              <a href="https://www.facebook.com/isthmusCR"><img src='./assets/Face.jpg' width="40px"></a>           
+                Desarrollado por: Erick, Sirlen y Roberto - Curso Angular &copy; 2020 
+            </div>  
+        </footer>
+
+</div>
+
+</Body>
